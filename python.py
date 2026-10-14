@@ -8,3 +8,5 @@ threshold = float(input("enter your threshold: ")) # takes threshold input from 
 for i in range(5):
     if psutil.cpu_percent(interval=1) > threshold:
         print("unhealthy")
+    else:
+        print("healthy")

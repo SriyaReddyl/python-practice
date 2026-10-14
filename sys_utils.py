@@ -14,3 +14,5 @@ def system_utils():
     }
 
     print(info)
+    return(info)
+    
