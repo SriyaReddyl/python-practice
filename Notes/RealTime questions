@@ -1,0 +1,509 @@
+# Python for DevOps Engineers
+## Interview Question Bank: Fundamentals to Real-World Infrastructure Automation
+
+**Focus:** Python coding, AWS Boto3, Linux, REST APIs, Jenkins, Docker, Kubernetes, Terraform, monitoring, and production troubleshooting.
+
+---
+
+# SECTION 1: Python Fundamentals — Interview Questions
+
+1. What is Python, and why is it useful for DevOps Engineers?
+2. What are the differences between Python and Bash scripting?
+3. What is the difference between a Python module, package, and library?
+4. What is the difference between built-in modules and external packages?
+5. What are variables and data types in Python?
+6. What is the difference between a list, tuple, set, and dictionary?
+7. What is the difference between mutable and immutable objects?
+8. What is the difference between `==` and `is`?
+9. What is the difference between `None`, `False`, and an empty list?
+10. What is type conversion?
+11. What is the difference between `break`, `continue`, and `pass`?
+12. What is the difference between `for` and `while` loops?
+13. What are list comprehensions?
+14. What is the difference between `append()` and `extend()`?
+15. What is the difference between `remove()`, `pop()`, and `del`?
+16. What are dictionaries, and how do you iterate over their keys and values?
+17. What is the difference between `sort()` and `sorted()`?
+18. What are functions, parameters, and return values?
+19. What is the difference between positional and keyword arguments?
+20. What are `*args` and `**kwargs`?
+21. What is variable scope in Python?
+22. What is a lambda function?
+23. What are exceptions, and why is exception handling important?
+24. What is the difference between syntax errors and runtime exceptions?
+25. What is the purpose of `try`, `except`, `else`, and `finally`?
+26. What is the purpose of `raise`?
+27. What is the purpose of `if __name__ == "__main__":`?
+28. What are virtual environments, and why do we use them?
+29. What is the difference between `pip` and Python's built-in modules?
+30. What is the purpose of `requirements.txt`?
+
+# SECTION 2: Python Coding Questions
+
+These are important hands-on exercises for testing your ability to write scripts independently.
+
+## Basic coding
+
+31. Write a Python program to check whether a number is even or odd.
+32. Write a program to find the largest number in a list.
+33. Write a program to reverse a string.
+34. Write a program to count the number of vowels in a string.
+35. Write a program to remove duplicate elements from a list.
+36. Write a program to find duplicate values in a list.
+37. Write a program to sort a list of server names alphabetically.
+38. Write a program to count the frequency of each word in a sentence.
+39. Write a program to find the second-largest number in a list.
+40. Write a program to check whether a string is a palindrome.
+
+## Intermediate coding
+
+41. Write a function that accepts a list of server IP addresses and removes duplicates.
+42. Write a program to find the servers present in one list but missing from another.
+43. Write a program to filter production servers from a list of dictionaries.
+44. Write a program to sort AWS instances by their state.
+45. Write a program to count errors and warnings in a log file.
+46. Write a program to find the ten most frequent error messages in a log.
+47. Write a program to parse a JSON file and extract selected fields.
+48. Write a program to convert a dictionary into JSON.
+49. Write a program to read server details from CSV and generate a summary report.
+50. Write a program to handle missing keys in a dictionary safely.
+51. Write a function that validates an IP address.
+52. Write a program that retries an operation up to three times when it fails.
+53. Write a program to find files larger than a specified size.
+54. Write a program to check whether a configuration file exists before processing it.
+55. Write a program that accepts command-line arguments using `argparse`.
+
+# SECTION 3: Important Python Modules for DevOps
+
+## `os`, `sys`, `pathlib`, and `shutil`
+
+56. What is the purpose of the `os` module?
+57. How do you read environment variables using Python?
+58. How do you create a directory if it does not exist?
+59. What is the difference between `os.path` and `pathlib`?
+60. How do you copy, move, and delete files using Python?
+61. What is the purpose of the `sys` module?
+62. How can you terminate a script with a nonzero exit code?
+
+## `subprocess`
+
+63. What is the `subprocess` module used for in DevOps?
+64. What is the difference between `os.system()` and `subprocess.run()`?
+65. How do you execute `kubectl get pods` using Python?
+66. What are `stdout`, `stderr`, and `returncode`?
+67. What does `check=True` do?
+68. How do you capture the output of a Linux command?
+69. How do you handle a command timeout?
+70. How do you execute commands safely without shell injection?
+71. How do you execute a command and save its output to a log file?
+72. What happens if a subprocess returns a nonzero exit code?
+
+## `json`, `csv`, `logging`, and `datetime`
+
+73. What is the difference between `json.load()` and `json.loads()`?
+74. What is the difference between `json.dump()` and `json.dumps()`?
+75. How do you read and write CSV files?
+76. Why is logging better than using only `print()`?
+77. What are the Python logging levels?
+78. How do you log exceptions with a traceback?
+79. How do you include timestamps in logs?
+80. How do you calculate the age of a file or the time since an event?
+81. How do you rotate log files?
+82. How do you prevent passwords and access keys from appearing in logs?
+
+# SECTION 4: Linux and Server Automation
+
+83. How would you automate Linux server health checks using Python?
+84. How can Python execute Linux commands?
+85. How would you check disk utilization and generate a warning when it exceeds 80%?
+86. How would you check CPU and memory utilization?
+87. How can Python inspect running processes?
+88. How would you check whether a systemd service is running?
+89. How would you check whether a TCP port is reachable?
+90. How would you monitor application log files for error messages?
+91. How would you identify and report files consuming excessive disk space?
+92. How would you automate backups of important configuration files?
+93. How would you schedule a Python script to run daily using cron?
+94. How would you run Python automation on a Windows server?
+95. How would you execute commands on remote Linux servers?
+96. What is Paramiko, and when would you use it?
+97. How would you handle an unreachable server in a script that checks 100 servers?
+98. How would you avoid running the same scheduled job twice simultaneously?
+
+# SECTION 5: REST API and HTTP Automation
+
+99. What is an API, and why is API automation important in DevOps?
+100. What is a REST API?
+101. What is the difference between GET, POST, PUT, PATCH, and DELETE?
+102. What do HTTP status codes 200, 201, 400, 401, 403, 404, 429, and 500 mean?
+103. How do you make an API request using the `requests` package?
+104. How do you send headers and query parameters?
+105. How do you send a JSON request body?
+106. How do you handle API authentication?
+107. What is the difference between authentication and authorization?
+108. Why should API requests use timeouts?
+109. How would you implement retries for HTTP 429 and 5xx responses?
+110. How would you process a paginated API response?
+111. How do you handle an API that returns malformed JSON?
+112. How would you check whether an application endpoint is healthy?
+113. How would you store and use API tokens securely?
+114. How would you handle SSL certificate verification errors safely?
+
+# SECTION 6: AWS Boto3 Interview Questions
+
+## Boto3 fundamentals
+
+115. What is Boto3?
+116. What is the difference between a Boto3 client and resource?
+117. How does Boto3 obtain AWS credentials?
+118. Why is an IAM role preferable to hardcoded AWS access keys for workloads?
+119. How do you select an AWS region and profile?
+120. Why does a Boto3 API response contain dictionaries and lists?
+121. How do you access values from a nested AWS response?
+122. Why are loops useful when processing Boto3 responses?
+123. What is pagination, and why do some AWS APIs require it?
+124. What are Boto3 waiters?
+125. How do you handle `AccessDenied`, missing credentials, and throttling errors?
+126. What is the purpose of `botocore.exceptions.ClientError`?
+127. How would you make an AWS automation script safe to rerun?
+128. How would you handle resources spread across multiple AWS regions?
+
+## EC2 and S3 automation
+
+129. Write a script to list all EC2 instances in a region.
+130. How would you print EC2 instance IDs, names, states, and private IP addresses?
+131. How would you find stopped EC2 instances?
+132. How would you start or stop an EC2 instance using Boto3?
+133. How would you prevent accidentally stopping production instances?
+134. How would you find EC2 instances missing required tags?
+135. How would you create an S3 bucket using Boto3?
+136. How would you list all S3 buckets?
+137. How would you upload and download an S3 object?
+138. How would you check whether a specific S3 object exists?
+139. How would you configure an S3 bucket securely?
+140. How would you generate an inventory of EC2 instances and S3 buckets in CSV format?
+
+## Other AWS services
+
+141. How would you create an EBS snapshot using Boto3?
+142. How would you retrieve CloudWatch metrics?
+143. How would you list Lambda functions?
+144. How would you inspect RDS instances?
+145. How would you retrieve AWS account identity using STS?
+146. How would you retrieve secrets from Secrets Manager securely?
+147. How would you identify untagged AWS resources?
+148. How would you create a daily AWS inventory report?
+149. How would you build a basic AWS cost-reporting script?
+150. How would you identify potentially unused resources without deleting anything?
+
+# SECTION 7: Creating AWS Infrastructure Using Python
+
+This section is especially important for interviews involving cloud automation. Practise in a sandbox AWS account with appropriate permissions.
+
+## Infrastructure fundamentals
+
+151. Can Python be used to create AWS infrastructure?
+152. What is the difference between using Boto3 and Terraform to provision infrastructure?
+153. When would you choose Python over Terraform, and when would you choose Terraform over Python?
+154. What is a VPC?
+155. What is the difference between a public and private subnet?
+156. What is an Internet Gateway?
+157. What is a route table?
+158. What is the purpose of a security group?
+159. What is the difference between a security group and a network ACL?
+160. What is the purpose of an EC2 key pair?
+161. What is the difference between an IAM role and an IAM user?
+162. What is infrastructure idempotency, and why does it matter?
+163. How would you avoid creating duplicate infrastructure when a script runs twice?
+164. How would you handle partial failures during infrastructure provisioning?
+165. How would you implement rollback or cleanup if resource creation fails halfway through?
+
+## Hands-on infrastructure creation tasks
+
+166. Write a Python script to create a VPC with a specified CIDR block.
+167. How would you create a subnet inside the VPC?
+168. How would you create and attach an Internet Gateway?
+169. How would you create a route table and add a default route to the Internet Gateway?
+170. How would you associate a public subnet with the route table?
+171. How would you create a security group allowing HTTP and HTTPS traffic?
+172. Why should SSH access not be opened to the entire internet by default?
+173. How would you create an EC2 instance in the subnet?
+174. How would you associate an appropriate IAM instance profile with an EC2 instance?
+175. How would you wait for an EC2 instance to reach the running state?
+176. How would you retrieve the instance ID and public IP after creation?
+177. How would you tag all resources with environment, owner, and project?
+178. How would you create an S3 bucket with encryption and public access blocked?
+179. How would you create an EBS snapshot and verify its completion?
+180. How would you delete the infrastructure safely after testing?
+
+## Advanced infrastructure scenarios
+
+181. Design a script that creates a VPC, subnet, Internet Gateway, route table, security group, and EC2 instance in the correct order.
+182. How would you handle a failure when the VPC is created but subnet creation fails?
+183. How would you discover whether a resource already exists before creating it?
+184. How would you identify and reuse existing infrastructure?
+185. How would you prevent accidental deletion of production resources?
+186. How would you add dry-run mode to an infrastructure automation script?
+187. How would you record every resource created by a script?
+188. How would you clean up only the resources owned by your automation?
+189. How would you handle AWS API rate limits while creating many resources?
+190. How would you deploy the infrastructure creation script through Jenkins?
+
+**Practical project:** Build an AWS provisioning script that creates a VPC, public subnet, Internet Gateway, route table, security group, and EC2 instance. Add resource tags, error handling, logging, existence checks, and cleanup instructions. Do not hardcode credentials or expose SSH to `0.0.0.0/0`.
+
+# SECTION 8: Jenkins and CI/CD Automation
+
+191. How can Python be integrated into a Jenkins pipeline?
+192. How do you execute a Python script from a Jenkinsfile?
+193. How do you install Python dependencies on a Jenkins agent?
+194. How would you use Python to check Jenkins job status through its REST API?
+195. How would you trigger a Jenkins job using Python?
+196. How would you retrieve console output for a failed build?
+197. How would you handle Jenkins authentication and API tokens?
+198. How would you pass build parameters to a Jenkins job?
+199. How would you make a pipeline fail if a Python validation script fails?
+200. How would you generate a deployment report after a pipeline finishes?
+201. How would you prevent secrets from being printed in pipeline logs?
+202. How would you retry a failed deployment verification?
+203. How would you use Python to validate a deployment after a release?
+204. How would you automate a daily report of failed Jenkins builds?
+205. How would you package a Python automation script into a Docker image and run it in CI/CD?
+
+# SECTION 9: Docker Automation
+
+206. How can Python interact with Docker?
+207. What is the Docker Python SDK?
+208. What is the difference between executing Docker CLI commands and using the Docker SDK?
+209. How would you list all running containers using Python?
+210. How would you retrieve container logs?
+211. How would you inspect container status and exit codes?
+212. How would you list images on a Docker host?
+213. How would you identify unused images?
+214. How would you build a Docker image from Python?
+215. How would you start and stop containers through the Docker API?
+216. How would you generate a report of container CPU and memory usage?
+217. How would you handle a Docker daemon connection failure?
+218. How would you automate cleanup without deleting images that are still in use?
+219. How would you run a Python script inside a Docker container?
+220. How would you schedule a Docker cleanup report on a runner server?
+
+# SECTION 10: Kubernetes Automation
+
+221. What is the Kubernetes Python client?
+222. How does a Python script authenticate with a Kubernetes cluster?
+223. What is the difference between loading kubeconfig and using in-cluster configuration?
+224. How would you list pods across all namespaces?
+225. How would you list deployments and services?
+226. How would you identify pods in `Pending`, `Failed`, or `CrashLoopBackOff` states?
+227. How would you retrieve pod logs?
+228. How would you count pod restarts and report unhealthy workloads?
+229. How would you filter pods using labels?
+230. How would you scale a deployment using the Kubernetes API?
+231. How would you restart a deployment safely?
+232. How would you create a Kubernetes Job from Python?
+233. How would you handle Kubernetes API exceptions and timeouts?
+234. How would you apply the principle of least privilege to a Python script running inside Kubernetes?
+235. How would you collect pod health information and export it to CSV?
+236. How would you verify that a deployment is healthy after a release?
+237. How would you monitor multiple namespaces without overloading the API server?
+238. How would you create a scheduled Kubernetes automation task?
+
+# SECTION 11: Terraform, Ansible, and Infrastructure as Code
+
+239. What is Infrastructure as Code (IaC)?
+240. What is the difference between Terraform and Boto3?
+241. Why is Terraform generally better suited to managing declarative infrastructure?
+242. How can Python invoke Terraform commands?
+243. How would you read Terraform outputs using Python?
+244. How would you parse Terraform JSON output?
+245. How would you use Python to validate a Terraform plan?
+246. How would you prevent Python automation from applying an unapproved infrastructure change?
+247. What is Ansible, and how does it relate to Python?
+248. When should you use Python instead of Ansible?
+249. How would you automate an infrastructure inventory from Terraform state or outputs?
+250. How would you build a pipeline that runs validation, Terraform planning, approval, and deployment?
+251. Why should Python scripts avoid modifying Terraform state files directly?
+252. How would you handle Terraform execution errors and capture diagnostic output?
+
+# SECTION 12: Monitoring, Networking, and Troubleshooting
+
+253. What is the `psutil` package?
+254. How would you monitor CPU, memory, and disk usage with Python?
+255. How would you check whether an application endpoint is responding?
+256. How would you check whether a TCP port is reachable?
+257. How would you validate an SSL certificate's expiration date?
+258. How would you query the Prometheus HTTP API?
+259. How would you retrieve metrics using the CloudWatch API?
+260. How would you expose custom application metrics using `prometheus-client`?
+261. How would you detect a sudden increase in application errors?
+262. How would you generate and send an alert when disk usage exceeds a threshold?
+263. How would you monitor 100 servers without waiting for each check sequentially?
+264. What are threading, multiprocessing, and asynchronous programming?
+265. How would you implement retries with exponential backoff?
+266. How would you troubleshoot an API that works in a browser but fails in Python?
+267. How would you troubleshoot a Boto3 SSL certificate verification error?
+268. How would you troubleshoot an `AccessDenied` error from AWS?
+269. How would you troubleshoot a Kubernetes API connection timeout?
+270. How would you troubleshoot a subprocess that hangs indefinitely?
+
+# SECTION 13: Testing, Security, and Production Readiness
+
+271. What is unit testing?
+272. What is the difference between unit testing and integration testing?
+273. What is `pytest`?
+274. How would you test a Python script that calls AWS APIs?
+275. What is mocking, and why is it useful?
+276. How would you test API failures without making real API calls?
+277. How would you test command execution without changing production systems?
+278. What is idempotency?
+279. How would you design a script to be safe when rerun?
+280. Why should production automation include logging and timeouts?
+281. How would you manage credentials securely?
+282. Why should TLS verification not be disabled to fix an SSL error?
+283. How would you implement a dry-run option?
+284. How would you validate input before executing destructive commands?
+285. How would you ensure that a cleanup script cannot delete production resources accidentally?
+286. How would you review dependencies for security vulnerabilities?
+287. How would you structure a Python automation project for maintainability?
+288. How would you document a production automation script?
+289. How would you make a script return a nonzero exit code when a critical check fails?
+290. How would you handle graceful shutdown and cleanup after an interruption?
+
+# SECTION 14: Real-World Scenario-Based Interview Questions
+
+For these questions, explain your approach before writing code.
+
+291. Your AWS account contains hundreds of EC2 instances. How would you inventory them across regions and export the results to CSV?
+292. A Jenkins pipeline fails intermittently because an API is unavailable. How would you implement retries, timeouts, and useful logs?
+293. A production server's disk usage exceeds 90%. How would you detect the issue and notify the responsible team?
+294. A Kubernetes deployment succeeds, but the application is not responding. How would Python help verify the release?
+295. A script creates a VPC successfully but fails before creating the EC2 instance. How would you recover or clean up safely?
+296. Your AWS automation receives `AccessDenied`. How would you determine whether the problem is caused by IAM permissions, resource policies, or another access control?
+297. An AWS API returns thousands of resources. How would you handle pagination and avoid memory issues?
+298. Your team wants to delete unused Docker images every night. How would you design a safe cleanup process?
+299. A Python script works on your laptop but fails on a Jenkins agent. What would you investigate?
+300. An API sometimes returns HTTP 429. How would you prevent your script from overwhelming the service?
+301. You need to check the health of 200 application endpoints every five minutes. How would you design the monitoring script?
+302. A Kubernetes cluster contains pods in `CrashLoopBackOff`. How would you gather diagnostics and produce a report?
+303. Your AWS inventory script is creating duplicate resources every time it runs. How would you redesign it?
+304. A developer accidentally commits an AWS secret to Git. What should happen immediately, and how can Python automation help prevent recurrence?
+305. Your Python infrastructure script fails halfway through a production deployment. How would you ensure safe recovery?
+306. A script that deletes unused resources is scheduled to run automatically. What safeguards should be implemented before enabling deletion?
+307. How would you build a daily report combining Jenkins build status, Kubernetes health, and AWS resource inventory?
+308. How would you execute a deployment verification script and make the CI/CD pipeline fail when health checks do not pass?
+309. A Python monitoring script consumes too much CPU. How would you profile and optimize it?
+310. Your team wants infrastructure created automatically when a Git change is approved. How would you design the workflow using Git, Jenkins, Terraform, and Python?
+
+# SECTION 15: Practical Coding Challenges
+
+Complete these without copying a solution.
+
+## Challenge 1: Server Inventory
+
+Create a JSON file containing server names, IP addresses, environments, and ports.
+
+Your script must:
+- Read the JSON file.
+- Validate required fields.
+- Identify production servers.
+- Detect duplicate IP addresses.
+- Export a CSV report.
+- Log invalid entries.
+
+## Challenge 2: Linux Health Checker
+
+Create a script that:
+- Checks disk utilization.
+- Collects CPU and memory information.
+- Checks an application endpoint.
+- Logs timestamps and failures.
+- Returns a nonzero exit code if a critical health check fails.
+
+## Challenge 3: AWS Resource Inventory
+
+Create a script that:
+- Retrieves the current AWS identity.
+- Lists EC2 instances and S3 buckets.
+- Handles API errors.
+- Supports region selection.
+- Exports results to CSV.
+- Uses AWS credentials from a secure credential provider.
+
+## Challenge 4: Jenkins Build Reporter
+
+Create a script that:
+- Calls the Jenkins API.
+- Retrieves the status of selected jobs.
+- Identifies failed builds.
+- Handles authentication and timeouts.
+- Generates a report.
+
+## Challenge 5: Kubernetes Health Reporter
+
+Create a script that:
+- Connects to a Kubernetes cluster.
+- Lists pods across namespaces.
+- Identifies unhealthy pods.
+- Captures restart counts and diagnostic information.
+- Exports the results to CSV.
+
+## Challenge 6: AWS Infrastructure Provisioner
+
+Create a script that:
+- Validates the requested configuration.
+- Creates a VPC and subnet.
+- Configures an Internet Gateway and route table.
+- Creates a security group with restricted inbound rules.
+- Launches an EC2 instance with appropriate permissions.
+- Tags every created resource.
+- Handles partial failures and cleanup.
+- Supports a dry-run or plan mode.
+
+Use a dedicated test environment. Infrastructure creation can incur charges, and cleanup must respect resource dependencies.
+
+## Challenge 7: CI/CD Deployment Verifier
+
+Create a script that:
+- Accepts an application URL and expected status.
+- Performs HTTP health checks with timeouts.
+- Retries transient failures.
+- Logs each attempt.
+- Produces a final report.
+- Returns a nonzero exit code if the deployment is unhealthy.
+
+---
+
+# SECTION 16: Fourteen-Day Interview Practice Schedule
+
+| Day | Interview preparation |
+|---|---|
+| 1 | Questions 1–15: Python basics |
+| 2 | Questions 16–30: Data types, functions, and environments |
+| 3 | Questions 31–55: Coding exercises |
+| 4 | Questions 56–82: Python modules |
+| 5 | Questions 83–98: Linux automation |
+| 6 | Questions 99–114: REST APIs |
+| 7 | Questions 115–140: Boto3 and AWS |
+| 8 | Questions 141–165: AWS services and infrastructure basics |
+| 9 | Questions 166–190: AWS infrastructure provisioning |
+| 10 | Questions 191–220: Jenkins and Docker |
+| 11 | Questions 221–238: Kubernetes |
+| 12 | Questions 239–270: IaC, monitoring, and troubleshooting |
+| 13 | Questions 271–290: Testing, security, and reliability |
+| 14 | Questions 291–310 and the seven coding challenges |
+
+---
+
+# Final Interview Preparation Advice
+
+Prioritize these five areas during your two weeks:
+
+1. **Python fundamentals:** dictionaries, loops, functions, exceptions, files, and JSON.
+2. **System automation:** `subprocess`, `os`, `pathlib`, `logging`, and command-line arguments.
+3. **AWS automation:** Boto3 clients, response handling, pagination, IAM permissions, and resource inventory.
+4. **DevOps integration:** Jenkins APIs, Docker, Kubernetes, and deployment health checks.
+5. **Infrastructure automation:** VPCs, subnets, route tables, security groups, EC2 provisioning, idempotency, and safe cleanup.
+
+For every practical question, be ready to explain what the script does, how it handles errors, how it authenticates securely, how it avoids destructive mistakes, and how you would test it before production use.
+
+**Your target after 14 days:** Be able to write small automation scripts independently, explain your design decisions, and demonstrate at least three working projects: an AWS inventory tool, a server health checker, and a Kubernetes or CI/CD health reporter.

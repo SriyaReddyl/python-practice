@@ -1,0 +1,271 @@
+# Python for DevOps Engineers
+
+
+# Week 1 — Python Fundamentals and Scripting
+
+## Day 1: Python Setup and Basics
+- What is Python? Why DevOps Engineers use it
+- Install Python and configure VS Code
+- Python interpreter and `.py` files
+- Variables, data types, and type conversion
+- Input and output using `input()` and `print()`
+- Operators: arithmetic, comparison, and logical
+- Comments, indentation, and basic errors
+
+**Practice:** Create a script that accepts a server name, environment, and port, then prints a server information report.
+
+## Day 2: Conditions, Loops, and Strings
+- `if`, `elif`, and `else`
+- `for` and `while` loops
+- `range()`, `break`, and `continue`
+- String indexing, slicing, and methods
+- f-strings and string formatting
+- Membership operators
+
+**Practice:**
+- Check whether a service port is within an expected range.
+- Loop through a list of server names.
+- Count occurrences of `ERROR` in sample log lines.
+
+## Day 3: Data Structures
+- Lists and list methods
+- Tuples and sets
+- Dictionaries and dictionary methods
+- Nested lists and dictionaries
+- List and dictionary comprehensions
+- Iterating through collections
+- Sorting, filtering, and searching data
+
+**Practice:**
+- Store server names, IP addresses, and environments.
+- Filter production servers from a list.
+- Process a sample AWS-style JSON response.
+
+## Day 4: Functions and Exception Handling
+- Defining and calling functions
+- Parameters, arguments, and return values
+- Default and keyword arguments
+- Variable scope
+- Importing modules
+- `try`, `except`, `else`, and `finally`
+- Raising exceptions
+- Basic debugging and tracebacks
+
+**Practice:**
+- Write reusable functions for checking disk thresholds and validating server configurations.
+- Handle missing files and invalid input without crashing.
+
+## Day 5: Files, JSON, and CSV
+- Reading and writing text files
+- Using `with open()`
+- File and directory operations
+- Reading and writing JSON
+- Understanding dictionaries and JSON responses
+- Reading and writing CSV files
+- Basic YAML concepts and installing PyYAML
+
+**Practice:**
+- Read server details from JSON.
+- Export server inventory to CSV.
+- Read a log file and generate an error report.
+
+## Day 6: Essential Built-in Modules
+- `os` — environment variables and operating system interaction
+- `sys` — arguments and exit codes
+- `pathlib` — file paths
+- `shutil` — copying and moving files
+- `subprocess` — running system commands
+- `datetime` — timestamps
+- `logging` — structured script logs
+- `argparse` — command-line arguments
+
+**Practice:**
+- Check whether a directory exists.
+- Run a system command from Python.
+- Write script output and errors to a log file.
+- Accept a filename or server name as a command-line argument.
+
+## Day 7: Linux Automation and Weekly Revision
+- Running Linux commands through Python
+- `subprocess.run()`
+- Capturing `stdout` and `stderr`
+- Understanding command exit codes
+- Command timeouts and error handling
+- Checking disk usage and system information
+- Parsing logs
+- Safe command execution
+- Revision of Days 1–6
+
+**Mini-project:** Build a Linux server health-check script that collects disk information, executes system commands, records errors, and generates a report.
+
+---
+
+# Week 2 — Python for Real-World DevOps
+
+## Day 8: Virtual Environments and Packages
+- What are Python modules and packages?
+- Built-in vs third-party packages
+- `pip` and dependency installation
+- Creating and activating virtual environments
+- `requirements.txt`
+- Importing external packages
+- Environment variables and configuration
+- Secrets management basics
+
+**Practice:**
+- Create a virtual environment.
+- Install `requests` and `psutil`.
+- Create a project with separate configuration and script files.
+
+## Day 9: REST APIs and the `requests` Package
+- What is an API?
+- REST and HTTP fundamentals
+- GET, POST, PUT, PATCH, and DELETE
+- HTTP status codes
+- Headers, query parameters, and JSON payloads
+- API authentication basics
+- Using `requests.get()` and `requests.post()`
+- Timeouts and error handling
+- Sessions and pagination basics
+
+**Practice:**
+- Call a public API.
+- Check whether a website or application endpoint is responding.
+- Parse a JSON response and create a report.
+
+## Day 10: AWS Automation with Boto3
+- What is Boto3?
+- AWS CLI and credentials
+- IAM roles and least privilege
+- Boto3 clients vs resources
+- Understanding API response dictionaries
+- Lists, loops, and response fields
+- Pagination and filters
+- Exception handling with Botocore
+- AWS regions and permissions
+
+**Practice:**
+- List S3 buckets.
+- List EC2 instances.
+- Print instance IDs, names, and states.
+- Export the inventory to CSV.
+
+Use a properly configured AWS account and start with read-only operations.
+
+## Day 11: Boto3 Practical Automation
+- EC2 instance inventory and status checks
+- S3 bucket and object operations
+- Resource tags
+- CloudWatch metrics basics
+- Handling missing permissions
+- API retries and throttling
+- Generating reports
+- Safe cleanup and approval checks
+
+**Mini-project:** Build an AWS inventory script that collects EC2 instance information and S3 bucket names, handles API errors, and generates a CSV report.
+
+## Day 12: Jenkins, Git, and Docker
+- Executing Git and Docker commands using `subprocess`
+- Git status and repository checks
+- Jenkins REST API fundamentals
+- Jenkins authentication and API tokens
+- Checking Jenkins job and build status
+- Docker CLI basics
+- Docker Python SDK introduction
+- Handling failed commands and API requests
+
+**Practice:**
+- Run `git status` from Python.
+- List Docker containers using a command.
+- Query a Jenkins job using its API, if available.
+
+## Day 13: Kubernetes and Monitoring
+- Kubernetes Python client
+- Loading kubeconfig
+- Kubernetes API and RBAC basics
+- Listing namespaces and pods
+- Checking pod status and restart counts
+- Reading pod logs
+- `psutil` for CPU, memory, and disk monitoring
+- HTTP health checks
+- Logging, retries, and timeouts
+
+**Practice:**
+- List pods across namespaces.
+- Identify pods that are not running.
+- Generate a cluster health report.
+- Check system CPU, memory, and disk usage.
+
+## Day 14: Final Project and Revision
+Build a small **DevOps Automation Toolkit** containing:
+
+1. A system health-check script.
+2. An AWS EC2 and S3 inventory script.
+3. An HTTP endpoint health checker.
+4. A Kubernetes pod status reporter.
+5. Logging and exception handling.
+6. CSV or JSON report generation.
+7. A README with setup and execution instructions.
+8. A Git repository containing your scripts.
+
+Revise:
+- Variables, conditions, loops, and functions.
+- Lists and dictionaries.
+- Files, JSON, and CSV.
+- `os`, `pathlib`, `subprocess`, and `logging`.
+- API requests and error handling.
+- Boto3 clients, response structures, and pagination.
+- Kubernetes client basics.
+
+---
+
+# Important Packages and Modules to Learn
+
+| Name | Priority | Purpose |
+|---|---|---|
+| `os` | Essential | Environment variables and OS operations |
+| `subprocess` | Essential | Run Linux, Git, Docker, and kubectl commands |
+| `json` | Essential | Process API responses |
+| `pathlib` | Essential | Manage files and directories |
+| `logging` | Essential | Record automation activity and failures |
+| `requests` | Essential | Interact with REST APIs |
+| `boto3` | Essential | Automate AWS |
+| `csv` | Essential | Generate reports |
+| `argparse` | Useful | Build command-line scripts |
+| `PyYAML` | Useful | Process YAML configuration |
+| `psutil` | Useful | Monitor system resources |
+| `kubernetes` | Useful | Interact with Kubernetes API |
+| `pytest` | Next step | Test automation scripts |
+| `docker` | Next step | Automate Docker Engine operations |
+| `paramiko` | Next step | SSH automation |
+
+---
+
+# What to Skip During These 14 Days
+
+To stay focused, postpone these topics until you have mastered the fundamentals:
+
+- Advanced object-oriented programming
+- Metaclasses and advanced decorators
+- Deep recursion and complex algorithms
+- Advanced asynchronous programming
+- Machine learning and data science libraries
+- Building web applications with Django or Flask
+- Advanced package publishing
+- Complex concurrency and multiprocessing
+
+You can return to these topics when a specific DevOps requirement calls for them.
+
+# Expected Outcome
+
+By the end of two weeks, your goal is to be able to:
+
+- Write small Python scripts without copying every line.
+- Process dictionaries, JSON responses, YAML files, and CSV reports.
+- Execute and troubleshoot system commands from Python.
+- Interact with REST APIs.
+- Perform basic AWS automation using Boto3.
+- Build introductory Jenkins and Kubernetes automation scripts.
+- Log errors, handle failures, and maintain scripts in Git.
+
+**Remember:** Two weeks is enough to establish a practical foundation, not to master every aspect of Python. Spend more time writing and debugging code than reading theory.
